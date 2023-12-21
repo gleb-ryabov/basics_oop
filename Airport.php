@@ -11,7 +11,7 @@
          * @param Plane $airplane
          */
         public function take_plane($airplane){
-            echo "Осуществляется прием самолета {$airplane-> name } в аэропорту {$this->name}<br>";
+            echo "Осуществляется прием самолета {$airplane->name} в аэропорту {$this->name}<br>";
             $airplane-> landing();
         }
 
@@ -20,8 +20,8 @@
          * @param Plane $airplane
          */
         public function free_up_space($airplane){
-            $airplane-> take_off();
-            echo "Место самолета {$airplane-> name} в аэропорту {$this-> name} освободилось<br>";
+            $airplane->take_off();
+            echo "Место самолета {$airplane->name} в аэропорту {$this->name} освободилось<br>";
         }
 
         /**
@@ -29,7 +29,7 @@
          * @param Plane $airplane
          */
         public function aircraft_parking($airplane){
-            echo "Самолет {$airplane->name} ушел на стоянку в аэропорту {$this-> name}<br>";
+            echo "Самолет {$airplane->name} ушел на стоянку в аэропорту {$this->name}<br>";
         }
 
         /**
@@ -37,7 +37,7 @@
          * @param Plane $airplane
          */
         public function ready_take_off($airplane){
-            echo "Самолет {$airplane->name} готов к вылету из аэропорта {$this-> name}<br>";
+            echo "Самолет {$airplane->name} готов к вылету из аэропорта {$this->name}<br>";
         }
 
         /**
@@ -53,7 +53,7 @@
          * @param Plane $airplane
          */
         public function boarging_passengers($airplane){
-            echo "Производится посадка пассажиров на самолет {$airplane->name} в аэропорту {$this-> name} <br>";
+            echo "Производится посадка пассажиров на самолет {$airplane->name} в аэропорту {$this->name} <br>";
         }
     }
 ?>

@@ -1,13 +1,22 @@
 <?php
+    include ("Engine.php");
+    include ("Crew.php");
+    
     abstract class Plane{
         public $name;
         private $max_speed;
+        private $crew;
+        public $engine;
         private $status = "Самолет на земле";
 
-        // Конструктор
-        public function __construct(string $name, int $max_speed){
+        /**
+         * Конструктор
+         * Используются ассоциации в массиве $crew
+         */
+        public function __construct(string $name, int $max_speed, Crew $crew){
             $this->name = $name;
             $this->max_speed = $max_speed;
+            $this->crew = $crew;
         }
         // Функция взлета самолета
         public function take_off(){
@@ -25,6 +34,13 @@
          */
         public function get_status(){
             return $this->status;
+        }
+                /**
+         * Функция для получения экипажа самолета, является частью ассоциации
+         * @return Crew
+         */
+        public function get_crew() {
+            return $this->crew;
         }
     }
 ?>
